@@ -251,7 +251,7 @@ Name: "{app}\QtQuick\Window.2"
 Name: "{app}\QtQuick\XmlListModel"
 
 [Registry]
-Root: HKCR; Subkey: ".nm.json"; ValueType: string; ValueName: ""; ValueData: "NoiseModelerDocument"; Flags: uninsdeletevalue
+Root: HKCR; Subkey: ".json"; ValueType: string; ValueName: ""; ValueData: "NoiseModelerDocument"; Flags: uninsdeletevalue
 Root: HKCR; Subkey: "NoiseModelerDocument"; ValueType: string; ValueName: ""; ValueData: "Noise Modeler document"; Flags: uninsdeletekey
 Root: HKCR; Subkey: "NoiseModelerDocument\DefaultIcon"; ValueType: string; ValueName: ""; ValueData: "{app}\nmgui.exe,0"
 Root: HKCR; Subkey: "NoiseModelerDocument\shell\open\command"; ValueType: string; ValueName: ""; ValueData: """{app}\nmgui.exe"" ""%1"""
