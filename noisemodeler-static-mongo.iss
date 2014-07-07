@@ -3,8 +3,8 @@
 
 #define MyAppName "Noise Modeler"
 #define MyAppVersion "0.1.15"
-#define MyAppPublisher "Johan Helsing"
-#define MyAppURL "http://www.johan.helsing.priv.no"
+#define MyAppPublisher "Johan Klokkhammer Helsing"
+#define MyAppURL "http://www.noisemodeler.org"
 #define MyAppExeName "nmgui.exe"
 
 [Setup]
@@ -14,7 +14,7 @@
 AppId={{47A314C9-B576-4502-BC67-B8E4F46B677D}
 AppName={#MyAppName}
 AppVersion={#MyAppVersion}
-;AppVerName={#MyAppName} {#MyAppVersion}
+AppVerName={#MyAppName} {#MyAppVersion}
 AppPublisher={#MyAppPublisher}
 AppPublisherURL={#MyAppURL}
 AppSupportURL={#MyAppURL}
@@ -25,6 +25,10 @@ OutputDir=C:\Users\johan\repos\installscripts
 OutputBaseFilename=noisemodeler-setup
 Compression=lzma
 SolidCompression=yes
+AppCopyright=Johan Klokkhammer Helsing
+LicenseFile=C:\Users\johan\repos\noisemodeler\LICENSE.md
+ChangesAssociations=True
+SetupIconFile=C:\Users\johan\repos\noisemodeler\nmgui\icons\noisemodeler.ico
 
 [Languages]
 Name: "english"; MessagesFile: "compiler:Default.isl"
@@ -245,3 +249,9 @@ Name: "{app}\QtQuick\Particles.2"
 Name: "{app}\QtQuick\PrivateWidgets"
 Name: "{app}\QtQuick\Window.2"
 Name: "{app}\QtQuick\XmlListModel"
+
+[Registry]
+Root: HKCR; Subkey: ".nm.json"; ValueType: string; ValueName: ""; ValueData: "NoiseModelerDocument"; Flags: uninsdeletevalue
+Root: HKCR; Subkey: "NoiseModelerDocument"; ValueType: string; ValueName: ""; ValueData: "Noise Modeler document"; Flags: uninsdeletekey
+Root: HKCR; Subkey: "NoiseModelerDocument\DefaultIcon"; ValueType: string; ValueName: ""; ValueData: "{app}\nmgui.exe,0"
+Root: HKCR; Subkey: "NoiseModelerDocument\shell\open\command"; ValueType: string; ValueName: ""; ValueData: """{app}\nmgui.exe"" ""%1"""
